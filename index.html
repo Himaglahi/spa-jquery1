@@ -4,15 +4,21 @@
     <title>Simple jQuery SPA</title>
 </head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="./css/cliff.css">
-<link rel="stylesheet" href="./css/mystyle.css">
+<link rel="stylesheet" href="./css/mj.css">
+<style>
+    .app-nav-btn-active {
+    background-color: #be0606;
+    color: rgb(58, 248, 0)585, 0, 0;
+}
+</style>
+
 
 <body>
 
     <nav>
         <div class="w3-bar w3-light-grey">
-            <a href="#home" class="w3-bar-item w3-button">Home</a>
-            <a href="#about" class="w3-bar-item w3-button">About Us</a>
+            <a href="#home" class="w3-bar-item w3-button">MY HOME</a>
+            <a href="#about" class="w3-bar-item w3-button">AYAW TUPLOKA</a>
         </div>
     </nav>
 
@@ -20,6 +26,13 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/router.js"></script>
+
+    <script>
+        $('nav a').on('click', function(event) {
+            $('nav a').removeclass('app-nav-active');
+            $(this).addClass('app-nav-btn-active');
+        })
+    </script>
     
 </body>
 </html>
